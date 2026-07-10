@@ -1,194 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Channel 13 News</title>
 
-<style>
-
-body{
-    margin:0;
-    background:#d8c5a0;
-    font-family:"Times New Roman",serif;
-    overflow:hidden;
-}
-
-header{
-    background:#6b5434;
-    color:white;
-    padding:20px;
-    text-align:center;
-    border-bottom:4px solid #3e2d1d;
-}
-
-header h1{
-    margin:0;
-    font-size:46px;
-}
-
-header p{
-    margin-top:5px;
-    font-style:italic;
-}
-
-nav{
-    background:#b89d73;
-    padding:10px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    border-bottom:2px solid #7d6444;
-}
-
-/* 90s Bevel Button */
-
-button{
-
-    width:150px;
-    height:42px;
-
-    background:#d9c7a2;
-
-    border-top:3px solid #ffffff;
-    border-left:3px solid #ffffff;
-
-    border-right:3px solid #685338;
-    border-bottom:3px solid #685338;
-
-    font-family:"Times New Roman";
-    font-size:18px;
-    cursor:pointer;
-
-    transition:.15s;
-}
-
-button:hover{
-
-background:#ead9b6;
-
-}
-
-button:active{
-
-border-top:3px solid #685338;
-border-left:3px solid #685338;
-
-border-right:3px solid white;
-border-bottom:3px solid white;
-
-transform:translateY(2px);
-
-}
-
-#viewport{
-
-position:relative;
-overflow:hidden;
-height:calc(100vh - 180px);
-
-}
-
-.page{
-
-position:absolute;
-
-width:100%;
-height:100%;
-
-padding:40px;
-
-box-sizing:border-box;
-
-left:100%;
-
-transition:left .55s ease;
-
-}
-
-.page.active{
-
-left:0;
-
-}
-
-.page.left{
-
-left:-100%;
-
-}
-
-.article{
-
-background:#efe2c3;
-
-padding:20px;
-
-border:2px solid #7f6545;
-
-max-width:900px;
-
-margin:auto;
-
-box-shadow:3px 3px 0 #8b6e48;
-
-}
-
-.article h2{
-
-margin-top:0;
-
-}
-
-.ticker{
-
-position:absolute;
-
-bottom:0;
-
-width:100%;
-
-background:#7d1111;
-
-color:white;
-
-font-weight:bold;
-
-padding:12px;
-
-overflow:hidden;
-
-white-space:nowrap;
-
-}
-
-.ticker span{
-
-display:inline-block;
-
-padding-left:100%;
-
-animation:ticker 20s linear infinite;
-
-}
-
-@keyframes ticker{
-
-0%{
-
-transform:translateX(0);
-
-}
-
-100%{
-
-transform:translateX(-100%);
-
-}
-
-}
-
-</style>
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -196,172 +16,108 @@ transform:translateX(-100%);
 
 <header>
 
+<div class="logo">
+
 <h1>CHANNEL 13 NEWS</h1>
 
 <p>Your Community. Your Story. Since 1958.</p>
+
+</div>
 
 </header>
 
 <nav>
 
-<button onclick="showPage('home')">Home</button>
+<a href="index.html"><button>HOME</button></a>
 
-<button onclick="showPage('local')">Local</button>
+<a href="local.html"><button>LOCAL</button></a>
 
-<button onclick="showPage('weather')">Weather</button>
+<a href="weather.html"><button>WEATHER</button></a>
 
-<button onclick="showPage('reports')">Reports</button>
+<a href="reports.html"><button>REPORTS</button></a>
 
-<button onclick="showPage('archive')">Archive</button>
+<a href="archive.html"><button>ARCHIVE</button></a>
 
 </nav>
 
-<div id="viewport">
+<div class="container">
 
-<div id="home" class="page active">
+<main>
 
-<div class="article">
+<h2>TOP STORY</h2>
 
-<h2>Scientists Monitor Yellowstone</h2>
+<img src="images/yellowstone.jpg" class="headlineImage">
+
+<h1>Scientists Monitor Increased Seismic Activity Near Yellowstone</h1>
 
 <p>
 
-USGS scientists continue monitoring an increase in seismic activity throughout the Northwestern United States.
-
-Officials maintain there is no immediate cause for concern.
+United States Geological Survey scientists continue monitoring unusual seismic activity occurring throughout Yellowstone National Park. Officials continue to reassure residents there is currently no danger.
 
 </p>
 
-</div>
+<hr>
 
-</div>
-
-<div id="local" class="page">
-
-<div class="article">
-
-<h2>Local News</h2>
+<h2>Additional Headlines</h2>
 
 <ul>
 
-<li>High School Football begins Friday.</li>
+<li>County Fair Opens This Weekend</li>
 
-<li>County Fair returns next weekend.</li>
+<li>Heat Advisory Issued Across Arkansas</li>
 
-<li>Road construction completed on Highway 43.</li>
+<li>Road Construction Completed Along Highway 43</li>
+
+<li>Local Football Season Begins Friday</li>
 
 </ul>
 
-</div>
+</main>
 
-</div>
-
-<div id="weather" class="page">
-
-<div class="article">
+<aside>
 
 <h2>Weather</h2>
 
-<p>
+<img src="images/weather.jpg" class="sideImage">
 
-Sunny skies expected throughout most of Arkansas.
+<p>
 
 High: 84°
 
 Low: 67°
 
+Sunny Skies Expected
+
 </p>
 
-</div>
+<hr>
+
+<h2>Community</h2>
+
+<img src="images/newsroom.jpg" class="sideImage">
+
+<p>
+
+Channel 13 celebrates 20 years of local broadcasting.
+
+</p>
+
+</aside>
 
 </div>
 
-<div id="reports" class="page">
+<footer>
 
-<div class="article">
+<div id="ticker">
 
-<h2>Special Reports</h2>
-
-<ul>
-
-<li>Yellowstone Seismic Investigation</li>
-
-<li>USGS Interview</li>
-
-<li>Volcanic Monitoring Program</li>
-
-</ul>
+BREAKING NEWS • Scientists Continue Monitoring Yellowstone • Officials Advise Residents There Is No Immediate Danger • CHANNEL 13 NEWS •
 
 </div>
 
-</div>
+</footer>
 
-<div id="archive" class="page">
-
-<div class="article">
-
-<h2>Archive</h2>
-
-<ul>
-
-<li>Dead Souls Investigation</li>
-
-<li>Subsurface Incident</li>
-
-<li>Northwood Streams Records</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="ticker">
-
-<span>
-
-BREAKING NEWS • Scientists Investigating Yellowstone • Officials Continue Monitoring Seismic Activity • Channel 13 News •
-
-</span>
-
-</div>
-
-<script>
-
-let current=document.querySelector(".active");
-
-function showPage(id){
-
-let next=document.getElementById(id);
-
-if(next===current) return;
-
-current.classList.remove("active");
-current.classList.add("left");
-
-next.style.left="100%";
-
-setTimeout(()=>{
-
-next.classList.add("active");
-
-},20);
-
-setTimeout(()=>{
-
-current.classList.remove("left");
-
-current.style.left="100%";
-
-current=next;
-
-},550);
-
-}
-
-</script>
+<script src="js/script.js"></script>
 
 </body>
+
 </html>
