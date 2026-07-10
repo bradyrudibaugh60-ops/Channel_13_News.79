@@ -1,1 +1,414 @@
+/* ===========================
+   CHANNEL 13 NEWS
+   STYLE.CSS
+   VERSION ALPHA 0.1
+=========================== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#d7c6a4;
+    font-family:"Times New Roman",serif;
+    color:#2d2218;
+
+}
+
+/* ===========================
+HEADER
+=========================== */
+
+header{
+
+    background:#5b4632;
+    color:white;
+    text-align:center;
+    padding:25px;
+
+    border-bottom:5px solid #332416;
+
+}
+
+.logo h1{
+
+    font-size:52px;
+    letter-spacing:3px;
+
+}
+
+.logo p{
+
+    margin-top:8px;
+    font-size:18px;
+    font-style:italic;
+
+}
+
+/* ===========================
+NAVIGATION
+=========================== */
+
+nav{
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+
+    padding:15px;
+
+    background:#b89b72;
+
+    border-bottom:3px solid #6d5438;
+
+}
+
+/* ===========================
+BEVEL BUTTONS
+=========================== */
+
+button{
+
+    width:150px;
+    height:42px;
+
+    background:#d9c7a4;
+
+    font-family:"Times New Roman";
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    border-top:3px solid white;
+
+    border-left:3px solid white;
+
+    border-right:3px solid #66503a;
+
+    border-bottom:3px solid #66503a;
+
+    transition:.15s;
+
+}
+
+button:hover{
+
+    background:#ead9b6;
+
+}
+
+button:active{
+
+    border-top:3px solid #66503a;
+
+    border-left:3px solid #66503a;
+
+    border-right:3px solid white;
+
+    border-bottom:3px solid white;
+
+    transform:translateY(2px);
+
+}
+
+/* ===========================
+MAIN LAYOUT
+=========================== */
+
+.container{
+
+    width:95%;
+
+    margin:25px auto;
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+main{
+
+    flex:3;
+
+    background:#efe2c4;
+
+    padding:25px;
+
+    border:2px solid #78614a;
+
+    box-shadow:5px 5px 0px #8f7658;
+
+}
+
+aside{
+
+    flex:1;
+
+    background:#efe2c4;
+
+    padding:20px;
+
+    border:2px solid #78614a;
+
+    box-shadow:5px 5px 0px #8f7658;
+
+}
+
+/* ===========================
+HEADINGS
+=========================== */
+
+h1{
+
+    margin:15px 0;
+
+}
+
+h2{
+
+    margin-bottom:15px;
+
+    border-bottom:2px solid #78614a;
+
+    padding-bottom:5px;
+
+}
+
+h3{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+PARAGRAPHS
+=========================== */
+
+p{
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+LISTS
+=========================== */
+
+ul{
+
+    margin-left:25px;
+
+}
+
+li{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+IMAGES
+=========================== */
+
+.headlineImage{
+
+    width:100%;
+
+    border:2px solid #6b5338;
+
+    margin-bottom:20px;
+
+}
+
+.sideImage{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    border:2px solid #6b5338;
+
+}
+
+.archiveImage{
+
+    width:100%;
+
+    border:2px solid #6b5338;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+REPORT BOXES
+=========================== */
+
+.reportBox{
+
+    background:#e5d4b3;
+
+    padding:20px;
+
+    border:2px solid #7b6348;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+ARCHIVE BOXES
+=========================== */
+
+.archiveBox{
+
+    background:#e5d4b3;
+
+    padding:20px;
+
+    border:2px solid #7b6348;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+WEATHER TABLE
+=========================== */
+
+.forecast{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.forecast th{
+
+    background:#5b4632;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.forecast td{
+
+    border:1px solid #8f7658;
+
+    padding:12px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+    margin-top:40px;
+
+}
+
+/* ===========================
+NEWS TICKER
+=========================== */
+
+#ticker{
+
+    background:#781414;
+
+    color:white;
+
+    padding:15px;
+
+    font-weight:bold;
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+}
+
+#ticker{
+
+    animation:tickerMove 22s linear infinite;
+
+}
+
+@keyframes tickerMove{
+
+0%{
+
+transform:translateX(100%);
+
+}
+
+100%{
+
+transform:translateX(-100%);
+
+}
+
+}
+
+/* ===========================
+LINKS
+=========================== */
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ===========================
+HORIZONTAL LINE
+=========================== */
+
+hr{
+
+    margin:25px 0;
+
+    border:1px solid #8f7658;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.container{
+
+flex-direction:column;
+
+}
+
+nav{
+
+flex-wrap:wrap;
+
+}
+
+button{
+
+width:130px;
+
+}
+
+}
